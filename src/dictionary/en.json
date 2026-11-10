@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "siteName": "NOVA",
+    "homeTitle": "NOVA | Smart choices, easy shopping",
+    "homeDescription": "NOVA online store: clothing, jewelry and electronics with clear prices and a simple checkout.",
+    "cartTitle": "Shopping cart",
+    "cartDescription": "The items you picked at the NOVA store.",
+    "notFoundTitle": "Page not found"
+  },
+  "common": {
+    "brand": "NOVA",
+    "skipToContent": "Skip to main content",
+    "retry": "Try again",
+    "close": "Close",
+    "cancel": "Cancel",
+    "loading": "Loading…"
+  },
+  "header": {
+    "mainNav": "Main navigation",
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "allCategories": "All categories",
+    "searchLabel": "Search products",
+    "searchPlaceholder": "Search products…",
+    "clearSearch": "Clear search",
+    "cart": "Shopping cart",
+    "cartWithCount": "Shopping cart, {count} items",
+    "language": "Language",
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme",
+    "openMenu": "Open menu",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Smart choices, easy shopping",
+    "subtitle": "Discover a different way to shop with NOVA",
+    "cta": "Browse products"
+  },
+  "categories": {
+    "label": "Product categories",
+    "all": "All",
+    "electronics": "Electronics",
+    "jewelery": "Jewelry",
+    "mensClothing": "Men's clothing",
+    "womensClothing": "Women's clothing"
+  },
+  "catalog": {
+    "title": "Featured products",
+    "resultCount": "{count} products",
+    "sortLabel": "Sort by",
+    "sort": {
+      "featured": "Featured",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "titleAsc": "Title (A to Z)",
+      "titleDesc": "Title (Z to A)"
+    },
+    "emptyTitle": "No products to show",
+    "emptyDescription": "New products will be added soon.",
+    "noResultsTitle": "No products found",
+    "noResultsDescription": "Try a different search term or category.",
+    "resetFilters": "Clear filters",
+    "errorTitle": "Could not load products",
+    "pagination": {
+      "label": "Product pages",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page": "Page {page}"
+    }
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "added": "Added",
+    "rating": "Rated {rate} out of {max}, based on {count} reviews"
+  },
+  "cart": {
+    "title": "Shopping cart",
+    "itemCount": "{count} items",
+    "unitPrice": "Unit price",
+    "lineTotal": "Line total",
+    "quantity": "Quantity",
+    "increase": "Increase quantity of {title}",
+    "decrease": "Decrease quantity of {title}",
+    "remove": "Remove {title} from cart",
+    "clear": "Empty cart",
+    "summaryTitle": "Order summary",
+    "subtotal": "Items",
+    "total": "Total",
+    "checkout": "Checkout",
+    "checkoutNote": "Online payment is outside the scope of this version.",
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "Browse the featured products and add some to your cart.",
+    "continueShopping": "Browse products",
+    "clearConfirmTitle": "Empty the cart?",
+    "clearConfirmDescription": "Every item will be removed from your cart.",
+    "clearConfirm": "Yes, empty it"
+  },
+  "newsletter": {
+    "title": "Stay in touch!",
+    "description": "Join the newsletter to get our latest offers.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Your email address…",
+    "submit": "Subscribe",
+    "success": "You are subscribed. Thank you!"
+  },
+  "footer": {
+    "tagline": "A store for everyone",
+    "helpTitle": "Shopping guide",
+    "help": {
+      "shipping": "Shipping methods",
+      "returns": "Returns",
+      "payment": "Secure payment",
+      "faq": "FAQ"
+    },
+    "linksTitle": "Useful links",
+    "links": {
+      "about": "About us",
+      "contact": "Contact us"
+    },
+    "socialTitle": "Social media",
+    "social": {
+      "telegram": "Telegram",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "x": "X"
+    },
+    "rights": "© {year} NOVA. All rights reserved."
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address."
+  },
+  "errors": {
+    "network": "Could not reach the server. Check your connection.",
+    "timeout": "The server took too long to respond. Try again.",
+    "notFound": "The requested data was not found.",
+    "server": "The server ran into a problem. Try again shortly.",
+    "unknown": "Something unexpected happened. Try again."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you were looking for does not exist or has moved.",
+    "back": "Back to the home page"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "This page could not be displayed. Try again."
+  }
+}
