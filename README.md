@@ -181,4 +181,4 @@ Layout uses CSS logical properties only, so RTL and LTR share the same styles.
 - Footer help and social links are display-only, as the challenge permits.
 - The hero illustration is an inline SVG, to avoid shipping stock photos.
 - Payment, orders, customer login and a product detail page are out of scope.
-- Time spent: _to be filled in before submission_.
+- Time spent: about 11 hours, including code review and manual testing.
