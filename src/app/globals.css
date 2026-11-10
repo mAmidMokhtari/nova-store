@@ -1,0 +1,146 @@
+/*
+ * Theme colors as CSS variables. `data-theme` is set on <html> before first paint
+ * by an inline script, so static pages never flash the wrong theme.
+ */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+
+  --color-background: #faf8f4;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f3f0ea;
+  --color-border: #e6e1d8;
+  --color-text: #16213e;
+  --color-text-muted: #5d6682;
+  --color-accent: #f26b21;
+  --color-accent-strong: #c9490b;
+  --color-accent-strong-hover: #b03f08;
+  --color-accent-soft: #fdeadd;
+  --color-on-accent: #ffffff;
+  --color-danger: #c0392b;
+  --color-danger-soft: #fbe9e7;
+  --color-success: #1c7c4d;
+  --color-star: #e89b0c;
+  --color-image-background: #ffffff;
+  --color-footer: #141d38;
+  --color-footer-text: #c3cade;
+  --color-footer-heading: #ffffff;
+  --color-overlay: rgba(15, 22, 41, 0.55);
+
+  --shadow-card: 0 1px 2px rgba(22, 33, 62, 0.06), 0 8px 24px rgba(22, 33, 62, 0.05);
+  --shadow-overlay: 0 24px 64px rgba(15, 22, 41, 0.28);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-background: #0e1424;
+  --color-surface: #172038;
+  --color-surface-muted: #1f2a47;
+  --color-border: #2c3859;
+  --color-text: #eef1f8;
+  --color-text-muted: #a3adc8;
+  --color-accent: #f7803c;
+  --color-accent-strong: #c9490b;
+  --color-accent-strong-hover: #dc5512;
+  --color-accent-soft: rgba(247, 128, 60, 0.16);
+  --color-on-accent: #ffffff;
+  --color-danger: #ff8a7a;
+  --color-danger-soft: rgba(255, 138, 122, 0.14);
+  --color-success: #5fd39a;
+  --color-star: #f5b83d;
+  --color-image-background: #ffffff;
+  --color-footer: #0a0f1d;
+  --color-footer-text: #aab3cc;
+  --color-footer-heading: #ffffff;
+  --color-overlay: rgba(4, 7, 15, 0.7);
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.55);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family:
+    var(--font-vazirmatn),
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
