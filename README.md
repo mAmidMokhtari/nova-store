@@ -5,8 +5,6 @@ challenge: a landing page with a searchable, sortable, paginated product list
 and a persistent shopping cart. Data comes from the public
 [FakeStoreAPI](https://fakestoreapi.com/docs).
 
-> This repository is shared for hiring evaluation only. See [LICENSE](./LICENSE).
-
 ## Stack
 
 | Area      | Choice                                                       |
