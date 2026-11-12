@@ -5,6 +5,20 @@ challenge: a landing page with a searchable, sortable, paginated product list
 and a persistent shopping cart. Data comes from the public
 [FakeStoreAPI](https://fakestoreapi.com/docs).
 
+## Screenshots
+
+Desktop (1280px), Persian, light theme:
+
+| Landing                                                       | Product list                                                      | Cart                                                  |
+| ------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------- |
+| ![Landing page on desktop](docs/screenshots/home-desktop.jpg) | ![Product list on desktop](docs/screenshots/products-desktop.jpg) | ![Cart on desktop](docs/screenshots/cart-desktop.jpg) |
+
+Mobile (375px) and tablet (768px, English, dark theme):
+
+| Landing, 375px                                             | Product list, 375px                                            | Cart, 375px                                        | Landing, 768px                                                                                    |
+| ---------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| ![Landing page at 375px](docs/screenshots/home-mobile.jpg) | ![Product list at 375px](docs/screenshots/products-mobile.jpg) | ![Cart at 375px](docs/screenshots/cart-mobile.jpg) | ![Landing page at 768px in English with the dark theme](docs/screenshots/home-tablet-en-dark.jpg) |
+
 ## Stack
 
 | Area      | Choice                                                       |
