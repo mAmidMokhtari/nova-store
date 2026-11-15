@@ -38,7 +38,7 @@ export function Rating({ rating }: RatingProps) {
 
   const rate = formatNumber(rating.rate, locale, { minimumFractionDigits: 1 });
   const count = formatNumber(rating.count, locale);
-  const label = t('rating', { rate, count, max: formatNumber(MAX_RATING, locale) });
+  const label = t('rating', { rate, count: rating.count, max: formatNumber(MAX_RATING, locale) });
 
   return (
     <Wrapper role="img" aria-label={label}>

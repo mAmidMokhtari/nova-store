@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 
 import { toApiErrorCode } from '@/api/ApiError';
@@ -9,7 +9,6 @@ import { useCategoryLabel } from '@/shared/useCategoryLabel';
 import type { Catalog } from '@/types';
 import { ApiErrorCode, RequestStatus } from '@/types/enums';
 import { filterProducts, paginate, sortProducts } from '@/utils/catalog';
-import { formatNumber } from '@/utils/formatters';
 import { PRODUCTS_SECTION_ID } from '@/utils/routes';
 import { useCartStore } from '@/zustand/cart.store';
 import { useCatalogStore } from '@/zustand/catalog.store';
@@ -38,7 +37,6 @@ export function useHomePage(initialCatalog: Catalog | null) {
   /* ---- State ---- */
   const t = useTranslations('catalog');
   const tErrors = useTranslations('errors');
-  const locale = useLocale();
   const getCategoryLabel = useCategoryLabel();
 
   const query = useCatalogStore((state) => state.query);
@@ -101,7 +99,7 @@ export function useHomePage(initialCatalog: Catalog | null) {
     selectedCategory: category,
     sort,
     currentPage,
-    resultCount: t('resultCount', { count: formatNumber(currentPage.totalItems, locale) }),
+    resultCount: t('resultCount', { count: currentPage.totalItems }),
     isLoading: request.status === RequestStatus.Loading,
     errorMessage: request.errorCode ? tErrors(request.errorCode) : null,
     isEmpty: products !== undefined && products.length === 0,

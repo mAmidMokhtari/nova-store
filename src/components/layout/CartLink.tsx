@@ -47,7 +47,7 @@ export function CartLink() {
   return (
     <StyledLink
       href={ROUTES.cart}
-      aria-label={visibleCount > 0 ? t('cartWithCount', { count: formattedCount }) : t('cart')}
+      aria-label={visibleCount > 0 ? t('cartWithCount', { count: visibleCount }) : t('cart')}
     >
       <ShoppingCart size={22} aria-hidden="true" />
       {visibleCount > 0 && <Badge aria-hidden="true">{formattedCount}</Badge>}

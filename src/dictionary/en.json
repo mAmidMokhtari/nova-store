@@ -25,7 +25,7 @@
     "searchPlaceholder": "Search products…",
     "clearSearch": "Clear search",
     "cart": "Shopping cart",
-    "cartWithCount": "Shopping cart, {count} items",
+    "cartWithCount": "Shopping cart, {count, plural, one {# item} other {# items}}",
     "language": "Language",
     "switchToLight": "Switch to light theme",
     "switchToDark": "Switch to dark theme",
@@ -47,7 +47,7 @@
   },
   "catalog": {
     "title": "Featured products",
-    "resultCount": "{count} products",
+    "resultCount": "{count, plural, one {# product} other {# products}}",
     "sortLabel": "Sort by",
     "sort": {
       "featured": "Featured",
@@ -72,11 +72,11 @@
   "product": {
     "addToCart": "Add to cart",
     "added": "Added",
-    "rating": "Rated {rate} out of {max}, based on {count} reviews"
+    "rating": "Rated {rate} out of {max}, based on {count, plural, one {# review} other {# reviews}}"
   },
   "cart": {
     "title": "Shopping cart",
-    "itemCount": "{count} items",
+    "itemCount": "{count, plural, one {# item} other {# items}}",
     "unitPrice": "Unit price",
     "lineTotal": "Line total",
     "quantity": "Quantity",

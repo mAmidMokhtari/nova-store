@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 import { getCartCount, getCartTotal } from '@/utils/cart';
-import { formatNumber, formatPrice } from '@/utils/formatters';
+import { formatPrice } from '@/utils/formatters';
 import { useCartStore } from '@/zustand/cart.store';
 import { useCartHydrated } from '@/zustand/useCartHydrated';
 
@@ -35,7 +35,7 @@ export function useCartPage() {
     // Until the persisted cart is read, "empty" is not known yet.
     isLoading: !isHydrated,
     isEmpty: items.length === 0,
-    itemCount: t('itemCount', { count: formatNumber(getCartCount(items), locale) }),
+    itemCount: t('itemCount', { count: getCartCount(items) }),
     total: formatPrice(getCartTotal(items), locale),
     increase,
     decrease,

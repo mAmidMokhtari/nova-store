@@ -25,7 +25,7 @@
     "searchPlaceholder": "جست‌وجو در محصولات…",
     "clearSearch": "پاک کردن جست‌وجو",
     "cart": "سبد خرید",
-    "cartWithCount": "سبد خرید، {count} کالا",
+    "cartWithCount": "سبد خرید، {count, number} کالا",
     "language": "زبان",
     "switchToLight": "تغییر به تم روشن",
     "switchToDark": "تغییر به تم تیره",
@@ -47,7 +47,7 @@
   },
   "catalog": {
     "title": "محصولات منتخب",
-    "resultCount": "{count} محصول",
+    "resultCount": "{count, number} محصول",
     "sortLabel": "مرتب‌سازی بر اساس",
     "sort": {
       "featured": "پیش‌فرض",
@@ -72,11 +72,11 @@
   "product": {
     "addToCart": "افزودن به سبد",
     "added": "افزوده شد",
-    "rating": "امتیاز {rate} از {max}، بر اساس {count} نظر"
+    "rating": "امتیاز {rate} از {max}، بر اساس {count, number} نظر"
   },
   "cart": {
     "title": "سبد خرید",
-    "itemCount": "{count} کالا",
+    "itemCount": "{count, number} کالا",
     "unitPrice": "قیمت واحد",
     "lineTotal": "مبلغ ردیف",
     "quantity": "تعداد",
