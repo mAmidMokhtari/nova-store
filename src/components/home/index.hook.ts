@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { toApiErrorCode } from '@/api/ApiError';
 import { getCatalog } from '@/requests/products.requests';
+import { useCategoryLabel } from '@/shared/useCategoryLabel';
 import type { Catalog } from '@/types';
 import { ApiErrorCode, RequestStatus } from '@/types/enums';
 import { filterProducts, paginate, sortProducts } from '@/utils/catalog';
@@ -38,6 +39,7 @@ export function useHomePage(initialCatalog: Catalog | null) {
   const t = useTranslations('catalog');
   const tErrors = useTranslations('errors');
   const locale = useLocale();
+  const getCategoryLabel = useCategoryLabel();
 
   const query = useCatalogStore((state) => state.query);
   const category = useCatalogStore((state) => state.category);
@@ -58,9 +60,9 @@ export function useHomePage(initialCatalog: Catalog | null) {
   const products = request.catalog?.products;
 
   const currentPage = useMemo(() => {
-    const filtered = filterProducts(products ?? [], { query, category });
+    const filtered = filterProducts(products ?? [], { query, category }, getCategoryLabel);
     return paginate(sortProducts(filtered, sort), page);
-  }, [products, query, category, sort, page]);
+  }, [products, query, category, sort, page, getCategoryLabel]);
 
   /* ---- Handlers ---- */
   const handleRetry = (): void => {

@@ -9,10 +9,15 @@ function normalize(value: string): string {
   return value.trim().toLowerCase().replace(/ي/g, 'ی').replace(/ك/g, 'ک');
 }
 
-/** Keeps the products that match the search text and the selected category. */
+/**
+ * Keeps the products that match the search text and the selected category.
+ * @param getCategoryLabel name of a category as the visitor reads it; the API only
+ *   has English slugs, so without it a Persian category name finds nothing
+ */
 export function filterProducts(
   products: readonly Product[],
   { query, category }: Pick<CatalogFilters, 'query' | 'category'>,
+  getCategoryLabel: (slug: string) => string = (slug) => slug,
 ): Product[] {
   const needle = normalize(query);
 
@@ -21,7 +26,8 @@ export function filterProducts(
     const matchesQuery =
       needle === '' ||
       normalize(product.title).includes(needle) ||
-      normalize(product.category).includes(needle);
+      normalize(product.category).includes(needle) ||
+      normalize(getCategoryLabel(product.category)).includes(needle);
 
     return inCategory && matchesQuery;
   });
