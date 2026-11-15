@@ -169,9 +169,11 @@ Layout uses CSS logical properties only, so RTL and LTR share the same styles.
 
 - `generateMetadata` per locale: title template, description, `metadataBase`,
   Open Graph, canonical URL and `hreflang` alternates (including `x-default`).
-- `app/robots.ts` allows the storefront and disallows the cart.
+- `app/robots.ts` allows crawling and points to the sitemap.
 - `app/sitemap.ts` lists the landing page for each locale with its alternates.
-- The cart page is `noindex`: its content is personal and client-only.
+- The cart page is `noindex`: its content is personal and client-only. It is
+  not disallowed in `robots.txt`, because a crawler that may not fetch the page
+  never sees the `noindex` tag.
 - Semantic landmarks, a single `h1` per page and a skip link.
 
 ## FakeStoreAPI limitations and how they are handled
