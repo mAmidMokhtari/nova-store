@@ -4,7 +4,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import { safeJsonLocalStorage } from '@/storage/safeLocalStorage';
 import type { CartItem, Product } from '@/types';
 import { StorageKey } from '@/types/enums';
-import { MIN_QUANTITY } from '@/utils/cart';
+import { MIN_QUANTITY, restoreCartItems } from '@/utils/cart';
 
 type CartState = {
   items: CartItem[];
@@ -49,6 +49,7 @@ export const useCartStore = create<CartState>()(
       version: 1,
       storage: createJSONStorage(() => safeJsonLocalStorage),
       partialize: ({ items }) => ({ items }),
+      merge: (persisted, current) => ({ ...current, items: restoreCartItems(persisted) }),
       skipHydration: true,
     },
   ),
