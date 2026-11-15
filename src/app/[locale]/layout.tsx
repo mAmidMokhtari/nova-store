@@ -14,9 +14,11 @@ import { CartHydrator } from '@/context/CartHydrator';
 import { StyledRegistry } from '@/context/StyledRegistry';
 import { AppThemeProvider } from '@/context/ThemeContext';
 import { ThemeScript } from '@/context/ThemeScript';
+import { toApiErrorCode } from '@/api/ApiError';
 import { getProductCategories } from '@/requests/products.requests';
 import { env } from '@/utils/env';
 import { getDirection } from '@/utils/formatters';
+import { createLogger } from '@/utils/logger';
 import { OPEN_GRAPH_LOCALES } from '@/utils/metadata';
 import { routing } from '@/utils/routing';
 
@@ -26,6 +28,8 @@ type LocaleLayoutProps = {
 };
 
 const MAIN_ID = 'main-content';
+
+const log = createLogger('locale-layout');
 
 const vazirmatn = localFont({
   src: '../../assets/Fonts/Vazirmatn-Variable.woff2',
@@ -75,7 +79,8 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
 async function loadCategories(): Promise<string[]> {
   try {
     return await getProductCategories();
-  } catch {
+  } catch (error) {
+    log.warn('categories request failed', { code: toApiErrorCode(error) });
     return [];
   }
 }

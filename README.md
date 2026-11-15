@@ -125,8 +125,11 @@ FakeStoreAPI → api/axiosInstance → requests/* → page (server) or page hook
 - **Server first.** `app/[locale]/page.tsx` is a Server Component. It fetches
   the catalog and passes it to the client view, so products are in the initial
   HTML. Pages are statically generated per locale and revalidated hourly.
-- **Resilient to API failure.** If the server-side request fails, the page
-  still renders and the client retries, with its own loading and error states.
+- **Resilient to API failure.** A failed server-side request is logged. During
+  the build and in development the page still renders and the client retries,
+  with its own loading and error states. When a running server fails to
+  regenerate the page, the error is rethrown so Next.js keeps serving the last
+  good version instead of caching an empty one.
 - **One HTTP client.** `axiosInstance` uses the `fetch` adapter, so the same
   instance works in Server Components and in the browser. Its response
   interceptor turns every failure into an `ApiError` carrying an
