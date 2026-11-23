@@ -256,7 +256,13 @@ that process:
   every page in a browser, in both languages, both themes and three widths. I
   tested login and user creation by hand. Both repositories were also cloned
   fresh and installed from the README.
-- **History.** The work was committed in logical steps at the end of that
-  session, which is why the initial commits of each project share one
-  timestamp. The later commits are documentation and repository housekeeping,
-  not changes to application code.
+- **History.** The first version was committed in logical steps at the end of
+  that session, which is why the initial commits share one timestamp. The
+  commits of 11 and 12 November are documentation and repository housekeeping.
+  The commits of 15 November change application behaviour. They are fixes from
+  a second review pass with the assistant: a stored cart that is not valid JSON
+  or has malformed rows no longer breaks the cart, a failed catalog request is
+  logged and keeps the last good page, search matches the translated category
+  name, the cart is kept out of search results by `noindex` alone, the type
+  check fails when the two dictionaries have different keys, and counts use
+  plural rules. They were applied together, so they share a timestamp too.
